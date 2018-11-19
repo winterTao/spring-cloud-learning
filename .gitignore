@@ -1,5 +1,7 @@
 #VS code
 .project
+.classpath
+.factorypath
 .settings
 .vscode
 
