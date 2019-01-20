@@ -1,0 +1,27 @@
+server:
+  port: 8881
+
+spring:
+  application:
+    name: resource-service
+
+auth-server: http://127.0.0.1:8810
+
+security:
+  oauth2:
+    resource:
+      prefer-token-info: true
+      user-info-uri: ${auth-server}/users/current
+    client:
+      id: client_2
+      client-secret: 123456
+      access-token-uri: ${auth-server}/oauth/token
+      grant-type: client_credentials,password
+      scope: server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+logging.level.org.springframework.security: DEBUG
