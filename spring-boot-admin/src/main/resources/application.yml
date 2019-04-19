@@ -3,8 +3,6 @@ server:
 spring:
   application:
     name: spring-boot-admin
-  profiles:
-    active: insecure
 
 info:
   app:
@@ -29,25 +27,3 @@ management:
     web:
       exposure:
         include: "*"
-
-security2:
-  user:
-    name: "user"
-    password: "password"
-
----
-spring:
-  profiles: insecure
-
----
-spring:
-  profiles: secure
-  security:
-    user:
-      name: ${security2.user.name}
-      password: ${security2.user.password}
-eureka:
-  instance:
-    metadata-map:
-      user.name: ${security2.user.name}
-      user.password: ${security2.user.password}
