@@ -27,23 +27,3 @@ management:
     web:
       exposure:
         include: "*"
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://localhost:8761/eureka/
-#    registry-fetch-interval-seconds: 30
-#  instance:
-#    lease-renewal-interval-in-seconds: 30
-#    health-check-url-path: /actuator/health
-##health endpoint是否必须显示全部细节。默认情况下, /actuator/health 是公开的，并且不显示细节。
-#management:
-#  endpoint:
-#    health:
-#      show-details: always
-#  endpoints:
-#    web:
-#      exposure:
-#        #选择暴露的端点
-#        include: info,health,env,beans
-#        #不暴露的端点
-#        exclude: env
