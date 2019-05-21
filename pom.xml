@@ -16,6 +16,7 @@
     <module>auth2-server</module>
     <module>resource-server</module>
     <module>gateway</module>
+    <module>profile</module>
   </modules>
 
   <properties>
@@ -112,6 +113,9 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
           <version>${spring.boot.version}</version>
+          <configuration>
+            <fork>true</fork>
+          </configuration>
           <executions>
             <execution>
               <goals>
