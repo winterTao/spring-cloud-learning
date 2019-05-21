@@ -1,0 +1,10 @@
+server:
+  port: 8072
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 30
+    health-check-url-path: /actuator/health
+  client:
+    registryFetchIntervalSeconds: 15
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
